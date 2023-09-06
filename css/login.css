@@ -1,0 +1,339 @@
+form {
+    height: fit-content;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    border: 2px solid hsl( var(--clr-light) / 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+    background: hsl( var(--clr-light) / 0.025);
+    /* backdrop-filter: blur(0.05rem); */
+
+}
+
+form * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-white) );
+    backdrop-filter: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 0.5rem;
+}
+
+input,
+.generic-selector {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid hsl( var(--clr-white) / 0.5);
+    padding: 0 0.5rem;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    color: hsl(var(--clr-white));
+    font-family: var(--ff-sans-normal);
+}
+
+.generic-selector option {
+    color: black;
+}
+
+input:focus {
+    border-bottom: 1px solid hsl(var(--clr-white));
+}
+
+
+::placeholder {
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    color: hsl(var(--clr-white) / 1);
+    font-family: var(--ff-sans-normal);
+}
+
+
+.form-button,
+.form-button-2 {
+    cursor: pointer;
+    margin-top: 1.5rem;
+    width: 100%;
+
+    background: hsl( var(--clr-light) / 0);
+    text-decoration: none;
+    color: hsl( var(--clr-light) );
+    padding: 0.25em 0;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid hsl( var(--clr-light) / 0.5 );
+    transition: transform 500ms ease-in-out;
+}
+
+.form-button-2 {
+    border: 1px solid hsl( var(--clr-light) / 0.5 );
+    padding: 0.35em 0;
+    border-radius: 0.25em;
+}
+
+.form-button:hover {
+    border-bottom: 1px solid hsl( var(--clr-light) / 1 );
+    transform: scale(1.05);
+}
+
+.form-button:last-of-type {
+    margin-top: 0.65rem;
+}
+
+.form__input:first-of-type {
+    border-bottom: 1px solid white;
+}
+
+
+
+/* button,
+.alt-button {
+    cursor: pointer;
+    margin-top: 1.5rem;
+    width: 100%;
+
+    background: hsl( var(--clr-light) / 0);
+    text-decoration: none;
+    color: hsl( var(--clr-light) );
+    padding: 0.25em 0;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 1.5em;
+    border: none;
+    border-bottom: 1px solid hsl( var(--clr-light) / 0.5 );
+    transition: transform 500ms ease-in-out;
+} */
+
+/* .alt-button {
+    border: 1px solid hsl( var(--clr-light) / 0.5 );
+    padding: 0.35em 0;
+    border-radius: 0.25em;
+} */
+
+/* button:hover {
+    border-bottom: 1px solid hsl( var(--clr-light) / 1 );
+    transform: scale(1.05);
+}
+
+button:last-of-type {
+    margin-top: 0.65rem;
+} */
+
+.social {
+    margin-top: 30px;
+    display: flex;
+}
+
+.social div {
+    background: red;
+    width: 150px;
+    border-radius: 3px;
+    padding: 5px 10px 10px 5px;
+    background-color: rgba(255, 255, 255, 0.27);
+    color: #eaf0fb;
+    text-align: center;
+}
+
+.social div:hover {
+    background-color: rgba(255, 255, 255, 0.47);
+}
+
+
+.google-svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.google-svg-container svg {
+    height: 1.5rem;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.login-link-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-top: 1rem;
+}
+
+.login-link-container > a {
+    display: block;
+    text-decoration: none;
+    margin-top: 0.25rem;
+    letter-spacing: 1.25px;
+    font-size: 1rem;
+}
+
+.login-link-container > a:hover {
+    text-decoration: underline;
+}
+
+/*Failure-Success Status Animation*/
+.hidden {
+    opacity: 0;
+    height: 0;
+    font-size: 0px;
+    color: inherit;
+    transition: opacity 0.35s linear, height 0.35s linear, font-size 0.35s linear, color 0.35s linear;
+}
+
+
+
+@media (max-width: 750px) {
+    h3 {
+        font-size: 2rem !important;
+    }
+
+    form > label,
+    ::placeholder {
+        font-size: 1.125rem !important;
+    }
+
+    form[action="/register"] {
+        height: 100%;
+        padding-top: 15%;
+    }
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    color: hsl( var(--clr-white) / 0.85);
+}
+
+/*Trial Dialog zur Bestätigung der Übungen zurücksetzen: */
+
+.modal-content input[type="text"][readonly] {
+    text-align: center;
+    color: hsl(var(--clr-light));
+    pointer-events: none;
+  }
+  
+  .modal-content input[type="text"]:focus {
+    border: none;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: auto;
+    right: auto;
+    top: 10vh;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    justify-content: center;
+    backdrop-filter: blur(1px); /* Hinzufügen von Unschärfe für Glasvermorphismus */
+    align-items: center;
+    font-size: 1.2em;
+  }
+    
+    .modal-content {
+      margin: 0;
+      background-color: hsl(var(--clr-dark));
+      padding: 1.5em;
+      border: 1px solid hsl(var(--clr-white) / 0.25);
+      width: 100%;
+      max-width: 400px; /* Maximale Breite des Modals */
+      text-align: center;
+      font-size: 1.1em;
+      backdrop-filter: none;
+    }
+  
+    .modal-content p {
+      text-align: center;
+    }
+    
+    /* Stil für die Buttons im Dialogfeld */
+    .modal-button {
+      margin: 5px;
+      padding: 8px 16px;
+      background: hsl(var(--clr-dark));
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      border: none;
+      cursor: pointer;
+      transition: color 300ms;
+      transition: color 300ms, transform 500ms ease-in-out; /* Ändern Sie die Dauer auf 500ms */
+    }
+    
+    .modal-button:hover {
+      color: hsl(var(--clr-white) / 0.75);
+      transform: scale(1.05);
+    }
+  
+    @media (min-width: 35em) {
+  
+      .modal {
+      /* border-color: red; */
+      top: 2vh;
+      left: auto;
+      right: auto;
+      height: fit-content;
+      max-width: 35%;
+      backdrop-filter: blur(10px);
+      margin: 0 auto; /* Zentrieren des Modals horizontal */
+      font-size: 1em;
+    }
+    
+    .modal-content {
+      width: 100%;
+      min-width: 100%;
+      padding: 1em;
+      border-radius: 0.25em;
+    }
+     /*  .modal {
+        border-color: red;
+        top: 20vh;
+        left: auto;
+        right: auto;
+        width: 100%; 
+        max-width: 35em;
+  
+        margin: 0 auto; 
+      }
+    
+      .modal-content {
+        width: 100%;
+        min-width: 100%;
+      }
+  
+      .modal-content p {
+        color: red;
+        text-align: center !important;
+      } */
+    }

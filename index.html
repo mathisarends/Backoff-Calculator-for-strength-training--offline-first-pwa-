@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="manifest" href="manifest/manifest.webmanifest">
+    <title>NEW APP</title>
+
+    <script defer src="js/calcBackoff.js"></script>
+    <script defer src="/js/app.js"></script>
+</head>
+
+<body class="home" style="overflow-y: hidden;">
+
+    <form action="">
+        <!--Backoff rechner-->
+        <h3 class="text-white ff-serif fs-700 letter-spacing-1" style="margin-bottom: 0.5em;">BACKOFF</h3>
+
+        <input type="text" id="weight-span" class="form__input" placeholder="" readonly style="text-align: center; font-size: 1.2rem;" />
+
+        <label class="ff-sans-normal letter-spacing-4 text-accent fs-400" for="working-weight">Moved Weight</label>
+        <input type="number" id="working-weight" class="form__input" name="weight" placeholder="Weight in working set" />
+
+        <label class="ff-sans-normal letter-spacing-4 text-accent fs-400" for="working-reps">Completed Repetitions</label>
+        <input type="number" id="working-reps" class="form__input" min="1" placeholder="Repetitions in working set" />
+
+        <label class="ff-sans-normal letter-spacing-4 text-accent fs-400" for="working-rpe">RPE</label>
+        <input type="number" id="working-rpe" class="form__input" min="6" max="10" placeholder="RPE in working set" />
+
+        <label class="ff-sans-normal letter-spacing-4 text-accent fs-400" for="desired-reps">Reps for
+            Backoff</label>
+        <input type="number" id="desired-reps" class="form__input" placeholder="How many reps in backoff" />
+
+        <label class="ff-sans-normal letter-spacing-4 text-accent fs-400" for="desired-rpe">RPE for
+            Backoff</label>
+        <input type="number" id="desired-rpe" class="form__input" placeholder="At what RPE?" />
+
+        <button class="form-button" id="kg-button" style="margin-top: 1em; border-bottom: none;" style="display: block;">KG</button>
+        <button class="form-button" id="pound-button" style="margin-top: 1em; border-bottom: none;" hidden>POUNDS</button>
+
+    </form>
+
+</body>
+
+</html>
